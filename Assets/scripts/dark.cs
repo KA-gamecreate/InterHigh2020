@@ -1,31 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
+using UnityEngine.UI; 
 public class dark : MonoBehaviour
 {
 
-    public GameObject darkness;
-    Slider _slider;
+    float fadeSpeed = 0.02f;       
+    float red, green, blue, alfa;   
+
+    public bool isFadeOut = false; 
+    public bool isFadeIn = false;  
+    
+    Image fadeImage;                
+
     void Start()
     {
-        // スライダーを取得する
-        _slider = GameObject.Find("Slider").GetComponent<Slider>();
+        fadeImage = GetComponent<Image>();
+        red = fadeImage.color.r;
+        green = fadeImage.color.g;
+        blue = fadeImage.color.b;
+        alfa = fadeImage.color.a;
     }
 
-    float _hp = 0;
     void Update()
     {
-        // HP上昇
-        _hp += 0.01f;
-        if (_hp > 1)
+        
+        if (isFadeIn)
         {
-            // 最大を超えたら0に戻す
-            _hp = 0;
+            StartFadeIn();
         }
 
-        // HPゲージに値を設定
-        _slider.value = _hp;
+        if (isFadeOut)
+        {
+            StartFadeOut();
+        }
+    }
+
+    void StartFadeIn()
+    {
+        alfa -= fadeSpeed;               
+        SetAlpha();                      
+        if (alfa <= 0)
+        {                    
+            StartFadeOut();   
+        }
+    }
+
+    void StartFadeOut()
+    {
+        fadeImage.enabled = true;  
+        alfa += fadeSpeed;         
+        SetAlpha();              
+        if (alfa >= 1)
+        {             
+            StartFadeIn();
+        }
+    }
+
+    void SetAlpha()
+    {
+        fadeImage.color = new Color(red, green, blue, alfa);
     }
 }

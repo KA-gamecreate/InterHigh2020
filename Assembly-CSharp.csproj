@@ -719,10 +719,11 @@
     <Compile Include="Assets\scripts\dark.cs" />
     <Compile Include="Assets\scripts\door.cs" />
     <Compile Include="Assets\scripts\EventController.cs" />
+    <Compile Include="Assets\scripts\fungus3.cs" />
     <Compile Include="Assets\scripts\gameover.cs" />
     <Compile Include="Assets\scripts\gameoverrange.cs" />
     <Compile Include="Assets\scripts\ghost.cs" />
-    <Compile Include="Assets\scripts\goal.cs" />
+    <Compile Include="Assets\scripts\Goalscript.cs" />
     <Compile Include="Assets\scripts\himawari.cs" />
     <Compile Include="Assets\scripts\human.cs" />
     <Compile Include="Assets\scripts\music.cs" />
@@ -732,6 +733,8 @@
     <Compile Include="Assets\scripts\restart.cs" />
     <Compile Include="Assets\scripts\Stage.cs" />
     <Compile Include="Assets\scripts\Story1.cs" />
+    <Compile Include="Assets\scripts\talk_fungus.cs" />
+    <Compile Include="Assets\scripts\talkfungus2.cs" />
     <Compile Include="Assets\scripts\TextController.cs" />
     <Compile Include="Assets\scripts\title.cs" />
     <Compile Include="Assets\scripts\umbrella.cs" />

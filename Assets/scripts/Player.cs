@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     bool enemy = false;
     public GameObject gameovercanvas;
     public GameObject gameclearcanvas;
-    public Rigidbody2D rb2d;
+    //public Rigidbody2D rb2d;
     public GameObject umbrellaimage;
     public GameObject umbrellaimage2;
 
@@ -87,17 +87,20 @@ public class Player : MonoBehaviour
                 transform.position += Vector3.up * 1.2f;
             }
         }
+
     }
     private IEnumerator TurnSurfaceArc(GameObject obj)
     {
         yield return new WaitForSeconds(1.0f);
         obj.GetComponent<PlatformEffector2D>().surfaceArc = 180;
     }
+ 
 
 
-    
 
-    private void Gameover()
+
+
+    public void Gameover()
     {
         gameover = true;
         gameovercanvas.SetActive(true);

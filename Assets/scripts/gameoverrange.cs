@@ -18,10 +18,9 @@ public class gameoverrange : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("ghost")) 
         {
-            col.gameObject.SendMessage("Gameover");
-            Debug.Log("dead");
+            col.gameObject.GetComponentInParent<Player>().Gameover();
         }
     }
 }

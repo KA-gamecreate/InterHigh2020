@@ -67,13 +67,15 @@ public class Charachange : MonoBehaviour
 
    void OnCollisionStay2D(Collision2D col)
     {
+        
 
         if (jump && col.gameObject.tag == "Ground")
         {
             if (Input.GetKeyDown(KeyCode.J))
             {
+                Debug.Log("jump");
                 char_rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
-                Invoke("JumpStop", 1);
+                //Invoke("JumpStop", 1);
             }
 
             

@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class buttonmanager : MonoBehaviour
 {
-    public GameObject menu;
-    public GameObject leftway;
-    
-    // Start is called before the first frame update
-    void Start()
+
+	public GameObject button1;
+	public GameObject button2;
+
+	// Start is called before the first frame update
+	void Start()
     {
-        menu.gameObject.transform.Translate(3, 0, 0);
+    
     }
 
     // Update is called once per frame
@@ -81,15 +82,14 @@ public class buttonmanager : MonoBehaviour
     {
         SceneManager.LoadScene("select2");
     }
-    public void right()
-    {
-        menu.gameObject.transform.Translate(3, 0, 0);
-
-    }
-    public void left()
-    {
-        menu.gameObject.transform.Translate(-3, 0, 0);
-    }
+    public void destroy()
+	{
+		Destroy(button1.gameObject, 1.0f);
+	}
+	public void destroy2()
+	{
+		Destroy(button2.gameObject, 1.0f);
+	}
 
 }
 

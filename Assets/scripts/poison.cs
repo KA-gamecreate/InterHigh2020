@@ -32,7 +32,7 @@ public class poison : MonoBehaviour
             
           else if (kira_image.gameObject.activeSelf == false)
             {
-                collision.gameObject.SendMessage("Gameover");
+                collision.gameObject.GetComponentInParent<Player>().Gameover();
                 Debug.Log("gameover");
             }
 

@@ -1,16 +1,23 @@
 ﻿<Properties StartupConfiguration="{E9E6069E-0B6D-C33E-4628-52AE66724C5F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/himawari.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Charachange.cs">
     <Files>
-      <File FileName="Assets/scripts/gameoverrange.cs" Line="4" Column="27" IsPinned="True" />
-      <File FileName="Assets/scripts/Charachange.cs" Line="84" Column="1" />
-      <File FileName="Assets/scripts/Player.cs" Line="8" Column="2" />
-      <File FileName="Assets/scripts/camera.cs" Line="11" Column="2" />
-      <File FileName="Assets/scripts/ghost.cs" Line="41" Column="1" />
-      <File FileName="Assets/scripts/goal.cs" Line="27" Column="49" />
-      <File FileName="Assets/scripts/Stage.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/human.cs" Line="174" Column="57" />
-      <File FileName="Assets/scripts/music.cs" Line="7" Column="5" />
-      <File FileName="Assets/scripts/himawari.cs" Line="10" Column="9" />
+      <File FileName="Assets/scripts/gameoverrange.cs" Line="23" Column="70" IsPinned="True" />
+      <File FileName="Assets/scripts/Charachange.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/camera.cs" />
+      <File FileName="Assets/scripts/ghost.cs" />
+      <File FileName="Assets/scripts/Stage.cs" />
+      <File FileName="Assets/scripts/human.cs" Line="162" Column="31" />
+      <File FileName="Assets/scripts/music.cs" />
+      <File FileName="Assets/scripts/himawari.cs" />
+      <File FileName="Assets/scripts/buttonmanager.cs" Line="9" Column="1" />
+      <File FileName="Assets/scripts/Goalscript.cs" />
+      <File FileName="Assets/scripts/poison.cs" />
+      <File FileName="Assets/scripts/umbrella.cs" />
+      <File FileName="Assets/Fungus/Scripts/EventHandlers/MessageReceived.cs" />
+      <File FileName="Assets/scripts/door.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/fungus3.cs" Line="27" Column="26" NotebookId="1" />
+      <File FileName="Assets/scripts/talkfungus2.cs" NotebookId="1" />
+      <File FileName="Assets/scripts/talk_fungus.cs" Line="29" Column="33" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +29,17 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8d820b47-e3eb-4fd3-92fd-f581b0f038bd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4fcac43b-fa5e-42a1-989b-04db81f5befb" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Temp/UnityTempFile-7371eabb9e1524a9f91215f853359f1c" relfile="Temp/UnityTempFile-7371eabb9e1524a9f91215f853359f1c" line="26" column="1" />
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Temp/UnityTempFile-625845143484249cdb943fcf616c82ce" relfile="Temp/UnityTempFile-625845143484249cdb943fcf616c82ce" line="26" column="1" />
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Assets/scripts/talkfungus2.cs" relfile="Assets/scripts/talkfungus2.cs" line="30" column="1" />
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Assets/scripts/talkfungus2.cs" relfile="Assets/scripts/talkfungus2.cs" line="31" column="1" />
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Temp/UnityTempFile-f362f5ced8ea54bd79e28f4f0c25d563" relfile="Temp/UnityTempFile-f362f5ced8ea54bd79e28f4f0c25d563" line="26" column="1" />
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Assets/scripts/fungus3.cs" relfile="Assets/scripts/fungus3.cs" line="26" column="1" />
+      <Breakpoint file="/Users/kasumipokemon/Downloads/UnityInterHigh2020/Assets/Fungus/Scripts/EventHandlers/MessageReceived.cs" relfile="Assets/Fungus/Scripts/EventHandlers/MessageReceived.cs" line="28" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

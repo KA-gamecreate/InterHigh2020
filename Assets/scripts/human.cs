@@ -126,10 +126,9 @@ public class human : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     Destroy(col.gameObject, 1.0f);
-                    Debug.Log("destroy");
                     animator.SetInteger("attack", 1);
                     Invoke("AnimeReset", 1);
-                    hasami_image.gameObject.SetActive(true);
+                    hasami_image.gameObject.SetActive(false);
                 }
             }
         }
@@ -138,7 +137,6 @@ public class human : MonoBehaviour
         {
             hasami.gameObject.SetActive(false);
             hasami_image.gameObject.SetActive(true);
-            Debug.Log("hasami");
         }
         if (col.gameObject.tag == "pikkeru")
         {
@@ -153,7 +151,6 @@ public class human : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     Destroy(col.gameObject,1.0f);
-                    Debug.Log("destroy");
                     animator.SetInteger("attack", 1);
                     Invoke("AnimeReset", 1);
                 }
@@ -162,7 +159,7 @@ public class human : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "enemy2")
         {
@@ -172,7 +169,6 @@ public class human : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     Destroy(collision.gameObject, 1.0f);
-                    Debug.Log("destroy2");
                     salt_image.gameObject.SetActive(false);
                     animator.SetInteger("attack", 1);
                     Invoke("AnimeReset", 1);
@@ -190,7 +186,6 @@ public class human : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     Destroy(collision.gameObject, 1.0f);
-                    Debug.Log("destroy");
                     salt_image.gameObject.SetActive(false);
                     animator.SetInteger("attack", 1);
                     Invoke("AnimeReset", 1);

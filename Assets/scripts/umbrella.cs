@@ -17,7 +17,7 @@ public class umbrella : MonoBehaviour
     {
       
 
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y+0.5f, 0);
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y+0.7f, 0);
         
     }
 }
