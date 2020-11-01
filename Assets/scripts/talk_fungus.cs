@@ -27,5 +27,6 @@ public class talk_fungus : MonoBehaviour
 		messageReceived?.OnSendFungusMessage("talk");
 		//wayimage.gameObject.SetActive(false);
 		Destroy(this.gameObject,1.0f);
+        Debug.Log("talk");
 	}
 }
