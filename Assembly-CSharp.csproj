@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E9E6069E-0B6D-C33E-4628-52AE66724C5F}</ProjectGuid>
+    <ProjectGuid>{ACE31173-888A-62EB-64BF-10E953432D9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -713,11 +713,16 @@
     <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
+    <Compile Include="Assets\scripts\beforegoal.cs" />
     <Compile Include="Assets\scripts\buttonmanager.cs" />
     <Compile Include="Assets\scripts\camera.cs" />
     <Compile Include="Assets\scripts\Charachange.cs" />
     <Compile Include="Assets\scripts\dark.cs" />
     <Compile Include="Assets\scripts\door.cs" />
+    <Compile Include="Assets\scripts\endless_enemy.cs" />
+    <Compile Include="Assets\scripts\endless_gameover.cs" />
+    <Compile Include="Assets\scripts\endless_player.cs" />
+    <Compile Include="Assets\scripts\enemymaker.cs" />
     <Compile Include="Assets\scripts\EventController.cs" />
     <Compile Include="Assets\scripts\fungus3.cs" />
     <Compile Include="Assets\scripts\gameover.cs" />
@@ -727,23 +732,30 @@
     <Compile Include="Assets\scripts\himawari.cs" />
     <Compile Include="Assets\scripts\human.cs" />
     <Compile Include="Assets\scripts\music.cs" />
+    <Compile Include="Assets\scripts\obakedead.cs" />
     <Compile Include="Assets\scripts\Player.cs" />
     <Compile Include="Assets\scripts\poison.cs" />
     <Compile Include="Assets\scripts\rain.cs" />
     <Compile Include="Assets\scripts\restart.cs" />
     <Compile Include="Assets\scripts\Stage.cs" />
+    <Compile Include="Assets\scripts\stagecreate.cs" />
+    <Compile Include="Assets\scripts\stagedestroy.cs" />
     <Compile Include="Assets\scripts\Story1.cs" />
     <Compile Include="Assets\scripts\talk_fungus.cs" />
-    <Compile Include="Assets\scripts\talkfungus2.cs" />
     <Compile Include="Assets\scripts\TextController.cs" />
+    <Compile Include="Assets\scripts\time.cs" />
     <Compile Include="Assets\scripts\title.cs" />
     <Compile Include="Assets\scripts\umbrella.cs" />
+    <Compile Include="Assets\scripts\volume.cs" />
+    <Compile Include="Assets\yokusiryoku.cs" />
     <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\LogoTypeGothic\ReadMe_Mac.txt" />
     <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
     <None Include="Assets\Fungus\Docs\README.txt" />
     <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Button\CC-BY.txt" />
+    <None Include="Assets\LogoTypeGothic\ReadMe_windows.txt" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Fungus\Fonts\Exo2\OFL.txt" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -752,6 +764,7 @@
     <None Include="Assets\Fungus\Scripts\link.xml" />
     <None Include="Assets\FungusExamples\FungusLua\Narrative\Resources\Lua\junglestory.txt" />
     <None Include="Assets\FungusExamples\Attribution.txt" />
+    <None Include="Assets\PixelMplus-20130602 2\README.txt" />
     <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Lock\CC-BY.txt" />
     <None Include="Assets\FungusExamples\TheFacility\Fonts\aleo\SIL Open Font License.txt" />
     <None Include="Assets\FungusExamples\Sherlock\Readme.txt" />
@@ -760,6 +773,7 @@
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Types\UnityTypes.txt" />
+    <None Include="Assets\images\PixelMplus-20130602 2\README.txt" />
     <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Key\CC-BY.txt" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Fungus\Integrations\Spine\Readme.txt" />
@@ -780,22 +794,22 @@
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Fungus\Docs\CHANGELOG.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.14f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -981,13 +995,13 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.14f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/kasumipokemon/Downloads/UnityInterHigh2020/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/kasumipokemon/Desktop/InterHigh2020/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.14f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

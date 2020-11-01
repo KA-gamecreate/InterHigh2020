@@ -7,11 +7,17 @@ using UnityEngine.SceneManagement;
 public class buttonmanager : MonoBehaviour
 {
 
-	public GameObject button1;
-	public GameObject button2;
+    public GameObject left;
+    public GameObject right;
+    public GameObject way1;
+    public GameObject way2;
+    public GameObject way3;
+    public GameObject wayall;
+    public GameObject hoge;
+    public GameObject hogehoge;
 
-	// Start is called before the first frame update
-	void Start()
+    // Start is called before the first frame update
+    void Start()
     {
     
     }
@@ -84,12 +90,56 @@ public class buttonmanager : MonoBehaviour
     }
     public void destroy()
 	{
-		Destroy(button1.gameObject, 1.0f);
-	}
-	public void destroy2()
-	{
-		Destroy(button2.gameObject, 1.0f);
+		Destroy(this.gameObject, 1.0f);
 	}
 
+    public void leftbutton()
+    {
+        left.gameObject.SetActive(false);
+        right.gameObject.SetActive(true);
+    }
+    public void rightbutton()
+    {
+        left.gameObject.SetActive(true);
+        right.gameObject.SetActive(false);
+    }
+    public void setumei1()
+    {
+        way1.gameObject.SetActive(true);
+        way2.gameObject.SetActive(false);
+        way3.gameObject.SetActive(false);
+    }
+    public void setumei2()
+    {
+        way1.gameObject.SetActive(false);
+        way2.gameObject.SetActive(true);
+        way3.gameObject.SetActive(false);
+    }
+    public void setumei3()
+    {
+        way1.gameObject.SetActive(false);
+        way2.gameObject.SetActive(false);
+        way3.gameObject.SetActive(true);
+
+    }
+    public void setumei4()
+    {
+        wayall.gameObject.SetActive(false);
+        way1.gameObject.SetActive(false);
+        way2.gameObject.SetActive(false);
+        way3.gameObject.SetActive(false);
+    }
+    public void setumei0()
+    {
+        hoge.gameObject.SetActive(true);
+    }
+    public void settei()
+    {
+        hogehoge.gameObject.SetActive(true);
+    }
+    public void endless()
+    {
+        SceneManager.LoadScene("endless");
+    }
 }
 

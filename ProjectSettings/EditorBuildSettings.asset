@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage10.unity
     guid: 844f04eccb2334e168b764cf429a418c
+  - enabled: 1
+    path: Assets/Scenes/endless.unity
+    guid: 0219a83228b1347ce9bc87347eb401d3
   m_configObjects: {}

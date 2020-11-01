@@ -8,13 +8,12 @@ public class Player : MonoBehaviour
 {
     float speed = 1.5f;
     int key = 0;
-    bool gameover = false;
-    bool gameclear = false;
+    public bool gameover = false;
+    public bool gameclear = false;
     bool hasigo = false;
     bool down = false;
     bool enemy = false;
     public GameObject gameovercanvas;
-    public GameObject gameclearcanvas;
     //public Rigidbody2D rb2d;
     public GameObject umbrellaimage;
     public GameObject umbrellaimage2;
@@ -24,7 +23,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         gameovercanvas.SetActive(false);
-        gameclearcanvas.SetActive(false);
         umbrellaimage.gameObject.SetActive(false);
         umbrellaimage2.gameObject.SetActive(true);
     }
@@ -108,7 +106,6 @@ public class Player : MonoBehaviour
     private void Gameclear()
     {
         gameclear = true;
-        gameclearcanvas.SetActive(true);
     }
 
 

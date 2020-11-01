@@ -5,7 +5,7 @@ using Fungus;
 
 public class talk_fungus : MonoBehaviour
 {
-	public GameObject wayimage;
+	//public GameObject wayimage;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -23,9 +23,9 @@ public class talk_fungus : MonoBehaviour
 
 		if (!col.gameObject.CompareTag("Player") && !col.gameObject.CompareTag("ghost")) return;
 
-		var messageReceived = GameObject.FindObjectsOfType<MessageReceived>();
-		messageReceived[2]?.OnSendFungusMessage("test");
-		wayimage.gameObject.SetActive(false);
+        var messageReceived = GameObject.FindObjectOfType<MessageReceived>();
+		messageReceived?.OnSendFungusMessage("talk");
+		//wayimage.gameObject.SetActive(false);
 		Destroy(this.gameObject,1.0f);
 	}
 }

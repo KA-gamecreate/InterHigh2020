@@ -1,64 +1,96 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class dark : MonoBehaviour
 {
 
-    float fadeSpeed = 0.02f;       
-    float red, green, blue, alfa;   
+    public readonly float fadeTime = 0.4f;  //フェードにかかる時間
+    float fadeDeltaTime = 0;
+    //フェードに使った時間
+    float changetime = 0f;
+    bool fade = false;
 
-    public bool isFadeOut = false; 
-    public bool isFadeIn = false;  
-    
-    Image fadeImage;                
+    public GameObject player;
 
-    void Start()
+
+    public Image image;    //フェードに使う画像
+
+    private IEnumerator FadeInCoroutine()
     {
-        fadeImage = GetComponent<Image>();
-        red = fadeImage.color.r;
-        green = fadeImage.color.g;
-        blue = fadeImage.color.b;
-        alfa = fadeImage.color.a;
-    }
-
-    void Update()
-    {
-        
-        if (isFadeIn)
+        float alpha = 1;                            //色の不透明度
+        Color color = new Color(0, 0, 0, alpha);    //Imageの色変更に使う
+        this.fadeDeltaTime = 0;                     //初期化
+        this.image.color = color;                   //色の初期化(黒)
+        do
         {
-            StartFadeIn();
+            yield return null;                      //次フレームで再開
+            this.fadeDeltaTime += Time.unscaledDeltaTime;       //時間の加算
+            alpha = 1 - (this.fadeDeltaTime / this.fadeTime);   //透明度の決定
+            if (alpha < 0)
+            {
+                alpha = 0;                          //alphaの値の制限
+            }
+            color.a = alpha;                        //色の透明度の決定
+            this.image.color = color;               //色の代入
         }
+        while (this.fadeDeltaTime <= this.fadeTime);
+    }
 
-        if (isFadeOut)
+    private IEnumerator FadeOutCoroutine()
+    {
+        float alpha = 0;                            //色の不透明度
+        Color color = new Color(0, 0, 0, alpha);    //Imageの色変更に使う
+        this.fadeDeltaTime = 0;                     //初期化
+        this.image.color = color;                   //色の初期化
+        do
         {
-            StartFadeOut();
+            yield return null;                      //次フレームで再開
+            this.fadeDeltaTime += Time.unscaledDeltaTime;       //時間の加算
+            alpha = this.fadeDeltaTime / this.fadeTime;         //透明度の決定
+            if (alpha > 1)
+            {
+                alpha = 1;                          //alphaの値の制限
+            }
+            color.a = alpha;                        //色の透明度の決定
+            this.image.color = color;               //色の代入
+        }
+        while (this.fadeDeltaTime <= this.fadeTime);
+
+
+
+    }
+    private void Update()
+    {
+        if (player.GetComponent<Player>().gameover == false && player.GetComponent<Player>().gameclear == false)
+        {
+            changetime += Time.deltaTime;
+            if (changetime > 2 && fade == false)
+            {
+                fade = !fade;
+                FadeIn();
+                changetime = 0;
+            }
+            else if (changetime > 2 && fade == true)
+            {
+                fade = !fade;
+                changetime = 0;
+                FadeOut();
+            }
         }
     }
 
-    void StartFadeIn()
+    //外部から呼び出される
+    public void FadeIn()
     {
-        alfa -= fadeSpeed;               
-        SetAlpha();                      
-        if (alfa <= 0)
-        {                    
-            StartFadeOut();   
-        }
+        IEnumerator coroutine = FadeInCoroutine();
+        StartCoroutine(coroutine);
     }
-
-    void StartFadeOut()
+    public void FadeOut()
     {
-        fadeImage.enabled = true;  
-        alfa += fadeSpeed;         
-        SetAlpha();              
-        if (alfa >= 1)
-        {             
-            StartFadeIn();
-        }
-    }
-
-    void SetAlpha()
-    {
-        fadeImage.color = new Color(red, green, blue, alfa);
+        IEnumerator coroutine = FadeOutCoroutine();
+        StartCoroutine(coroutine);
     }
 }
